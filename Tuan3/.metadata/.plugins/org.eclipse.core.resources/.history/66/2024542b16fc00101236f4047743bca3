@@ -1,0 +1,15 @@
+public class ObserverDemo {
+    public static void main(String[] args) {
+
+        Stock stock = new Stock();
+
+        Observer investor1 = new Investor("Alice");
+        Observer investor2 = new Investor("Bob");
+
+        stock.attach(investor1);
+        stock.attach(investor2);
+
+        stock.setPrice(120.5f);
+        stock.setPrice(135.0f);
+    }
+}
