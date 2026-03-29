@@ -1,0 +1,9 @@
+services:
+  my-express-app:
+    build: .
+    image: my-express-app:latest
+    ports:
+      - "8080:3000"
+    environment:
+      - PORT=3000
+    restart: unless-stopped
